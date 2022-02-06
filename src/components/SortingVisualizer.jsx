@@ -10,28 +10,47 @@ const SortingVisualizer = (props) => {
     return array;
   }
   const [array, setArray] = useState([]);
+  const [disabled, setDisabled] = useState(false);
+
   useEffect(() => {
     const initialArray = genArray(props.length, 5, 100);
     setArray(initialArray);
+    setDisabled(false);
   }, [props.length]);
-  const max = Math.max(...array);
-  const swap = (array, index1, index2) => {
-    const temp = array[index1];
-    array[index1] = array[index2];
-    array[index2] = temp;
-  };
-  const SortHandler = () => {
-    const tempArray = [...array];
+  useEffect(() => {
+    props.onDisable(disabled);
+  }, [disabled, props]);
+
+  function bubbleSort() {
+    const bars = document.getElementsByClassName("inner-filling");
     for (let i = 0; i < props.length; i++) {
       for (let j = 0; j < props.length - i - 1; j++) {
-        if (tempArray[j] > tempArray[j + 1]) {
-          swap(tempArray, j, j + 1);
-          setArray(tempArray);
-        }
+        setTimeout(() => {
+          if (
+            Number(bars[j].style.height.replaceAll("%", "")) >
+            Number(bars[j + 1].style.height.replaceAll("%", ""))
+          ) {
+            const temp = bars[j].style.height;
+            bars[j].style.height = bars[j + 1].style.height;
+            bars[j + 1].style.height = temp;
+          }
+        }, 100);
       }
     }
+  }
+  const max = Math.max(...array);
+  const SortHandler = () => {
+    setDisabled(true);
+  };
+  const resetHandler = () => {
+    setDisabled(false);
+    const tempArray = genArray(props.length, 5, 100);
     setArray(tempArray);
   };
+  if (disabled) {
+    bubbleSort();
+  }
+
   return (
     <React.Fragment>
       <div className="Chart">
@@ -46,8 +65,11 @@ const SortingVisualizer = (props) => {
           );
         })}
       </div>
-      <button className="myButton" onClick={SortHandler}>
+      <button disabled={disabled} className="myButton" onClick={SortHandler}>
         Sort
+      </button>
+      <button className="myButton" onClick={resetHandler}>
+        Reset
       </button>
     </React.Fragment>
   );

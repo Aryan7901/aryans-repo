@@ -4,12 +4,16 @@ import "./App.css";
 function App() {
   const inputRef = useRef();
   const [length, setLength] = useState(5);
+  const [disabled, setDisabled] = useState(false);
   const onChangeHandler = () => {
     setLength(inputRef.current.value);
   };
+  const onDisable = (value) => {
+    setDisabled(value);
+  };
   return (
     <div className="outer">
-      <SortingVisualizer length={length} />;
+      <SortingVisualizer length={length} onDisable={onDisable} />;
       <div className="input">
         <input
           type="range"
@@ -18,6 +22,7 @@ function App() {
           ref={inputRef}
           onChange={onChangeHandler}
           id="myInput"
+          disabled={disabled}
         />
         <label htmlFor="myInput">Array length :{length} </label>
       </div>
