@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aryans-repo/static/css/main.5757b084.css",
+    "main.js": "/aryans-repo/static/js/main.e86de561.js",
+    "static/js/787.3f94706e.chunk.js": "/aryans-repo/static/js/787.3f94706e.chunk.js",
+    "index.html": "/aryans-repo/index.html",
+    "main.5757b084.css.map": "/aryans-repo/static/css/main.5757b084.css.map",
+    "main.e86de561.js.map": "/aryans-repo/static/js/main.e86de561.js.map",
+    "787.3f94706e.chunk.js.map": "/aryans-repo/static/js/787.3f94706e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5757b084.css",
+    "static/js/main.e86de561.js"
+  ]
+}
