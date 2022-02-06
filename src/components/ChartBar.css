@@ -1,0 +1,10 @@
+.outer-container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column-reverse;
+}
+.inner-filling {
+  background-color: rgb(98, 98, 236);
+  width: 100%;
+}

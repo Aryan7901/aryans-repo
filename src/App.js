@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useRef, useState } from "react";
+import SortingVisualizer from "./components/SortingVisualizer";
+import "./App.css";
 function App() {
+  const inputRef = useRef();
+  const [length, setLength] = useState(5);
+  const onChangeHandler = () => {
+    setLength(inputRef.current.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="outer">
+      <SortingVisualizer length={length} />;
+      <div className="input">
+        <input
+          type="range"
+          min="5"
+          max="1000"
+          ref={inputRef}
+          onChange={onChangeHandler}
+          id="myInput"
+        />
+        <label htmlFor="myInput">Array length :{length} </label>
+      </div>
     </div>
   );
 }
