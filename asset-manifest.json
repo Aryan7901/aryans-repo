@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aryans-repo/static/css/main.5757b084.css",
-    "main.js": "/aryans-repo/static/js/main.e86de561.js",
+    "main.css": "/aryans-repo/static/css/main.58b32814.css",
+    "main.js": "/aryans-repo/static/js/main.76ae578f.js",
     "static/js/787.3f94706e.chunk.js": "/aryans-repo/static/js/787.3f94706e.chunk.js",
     "index.html": "/aryans-repo/index.html",
-    "main.5757b084.css.map": "/aryans-repo/static/css/main.5757b084.css.map",
-    "main.e86de561.js.map": "/aryans-repo/static/js/main.e86de561.js.map",
+    "main.58b32814.css.map": "/aryans-repo/static/css/main.58b32814.css.map",
+    "main.76ae578f.js.map": "/aryans-repo/static/js/main.76ae578f.js.map",
     "787.3f94706e.chunk.js.map": "/aryans-repo/static/js/787.3f94706e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5757b084.css",
-    "static/js/main.e86de561.js"
+    "static/css/main.58b32814.css",
+    "static/js/main.76ae578f.js"
   ]
 }
