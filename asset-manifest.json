@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bubbleSort/static/css/main.58b32814.css",
-    "main.js": "/bubbleSort/static/js/main.8c36770a.js",
+    "main.js": "/bubbleSort/static/js/main.2280fffc.js",
     "static/js/787.3f94706e.chunk.js": "/bubbleSort/static/js/787.3f94706e.chunk.js",
     "index.html": "/bubbleSort/index.html",
     "main.58b32814.css.map": "/bubbleSort/static/css/main.58b32814.css.map",
-    "main.8c36770a.js.map": "/bubbleSort/static/js/main.8c36770a.js.map",
+    "main.2280fffc.js.map": "/bubbleSort/static/js/main.2280fffc.js.map",
     "787.3f94706e.chunk.js.map": "/bubbleSort/static/js/787.3f94706e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58b32814.css",
-    "static/js/main.8c36770a.js"
+    "static/js/main.2280fffc.js"
   ]
 }
